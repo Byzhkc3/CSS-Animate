@@ -1,0 +1,33 @@
+h1{
+    position: relative;
+    font-family: Consolas;
+    animation: typing 3s steps(18);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 18.5ch;
+}
+h1::after{
+    position: absolute;
+    right:0;
+    top: 0;
+    content: "";
+    border-right: 4px solid black;
+    height: 100%;
+    animation: cursor 2s steps(18) infinite;
+}
+@keyframes typing{
+    0%{
+        width:0ch;
+    }
+    100%{
+        width: 18ch;
+    }
+}
+@keyframes cursor{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
